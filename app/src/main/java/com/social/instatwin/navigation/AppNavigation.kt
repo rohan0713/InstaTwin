@@ -10,13 +10,14 @@ import com.social.instatwin.presentation.ExploreCompose
 import com.social.instatwin.presentation.HomeCompose
 import com.social.instatwin.presentation.ProfileCompose
 import com.social.instatwin.presentation.getResponse
+import com.social.instatwin.presentation.getStories
 
 @Composable
 fun AppNavigation(navController: NavHostController){
 
     NavHost(navController = navController, startDestination = "home"){
         composable("home"){
-            HomeCompose()
+            getStories()
         }
 
         composable("explore"){

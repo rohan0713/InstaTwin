@@ -27,5 +27,23 @@ class RetrofitClient {
         val api by lazy {
             retro.create(ApiInterface::class.java)
         }
+
+        val retroFeed by lazy {
+
+            val loggingInterceptor = HttpLoggingInterceptor()
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+
+            val client = OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
+
+            Retrofit.Builder()
+                .baseUrl(Constants.feedUrl)
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        }
+
+        val feed by lazy {
+            retroFeed.create(ApiInterface::class.java)
+        }
     }
 }

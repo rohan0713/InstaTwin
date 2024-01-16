@@ -6,6 +6,10 @@ class Constants {
         val url by lazy {
             "https://rickandmortyapi.com/api/"
         }
+
+        val feedUrl by lazy {
+            "https://quickie.free.beeceptor.com/"
+        }
     }
 
 }
