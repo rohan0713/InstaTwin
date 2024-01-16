@@ -58,7 +58,7 @@ fun ItemContent(item: Result){
     val image = rememberImagePainter(data = item.image)
     Box(modifier = Modifier
         .fillMaxWidth()
-        .height(Random.nextInt(200, 200).dp)
+        .height(Random.nextInt(100, 200).dp)
         .background(Color.White)){
 
         Image(painter = image,
