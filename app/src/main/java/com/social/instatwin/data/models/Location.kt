@@ -1,4 +1,4 @@
-package com.social.instatwin.data
+package com.social.instatwin.data.models
 
 data class Location(
     val name: String,
